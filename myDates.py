@@ -98,6 +98,32 @@ ax.set_ylabel("Max Bytes in Use")
 ax.grid(True)
 
 print ("Nice plot using plt.subplots() - with dates and hour")
+"""
+
+"""
+#----------------------------------- 0. Dates - module  --------------------------------------------------------------
+#
+# datetime module vs class
+#
+#   import datetime #imports a module
+#   from datetime import datetime #imports a class with the same name
+#   choose one, don't do both
+# refer: https://docs.python.org/3/library/datetime.html
+#---------------------------------------------------------------------------------------------------------------------
+
+#if import a module
+import datetime #supplies classes for manipulating dates and times
+d1 = datetime.datetime.strptime('2017/12/31 23:59', '%Y/%m/%d %H:%M')
+print (d1, type(d1))
+
+#if import specific classes from a module
+#create a datetime object from a string
+from datetime import datetime, date
+d2 = datetime.strptime('2017/12/31 23:59', '%Y/%m/%d %H:%M')
+print (d2, type(d2))
+#create a string from a datetime object
+d3 = d2.strftime('%Y/%m/%d')
+print (d3, type(d3)) #notice different type and different format
 
 """
 #----------------------------------- 0. Dates - even simpler ----------------------------------------------------------
